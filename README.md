@@ -12,13 +12,11 @@ TV Show Finder is a React web application that allows users to search for TV sho
 
 ## Screenshots
 
-![Home Page](screenshots/home.png)
-*Home page with search bar and trending shows*
+<div style="text-align: center;">
+    <img src="Screenshots/home.png" style="margin-bottom: 10px;" />
+    <img src="Screenshots/trend.png" style="margin-bottom: 10px;"/>
+  <img src="Screenshots/det.png" style="margin-bottom: 10px;"/>
+</div>
 
-![Search Results](screenshots/search_results.png)
-*Search results page*
-
-![Show Detail](screenshots/show_detail.png)
-*Show detail page*
 
 
