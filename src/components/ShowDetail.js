@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, Grid, Container, Link, Typography, Chip } from '@mui/material';
+import { Grid, Container, Link, Typography, Chip } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import StarIcon from '@mui/icons-material/Star';
