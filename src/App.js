@@ -48,7 +48,7 @@ const App = () => {
 
         <Routes>
           <Route path="/show/:id" element={<ShowDetail />} />
-          <Route path="/" element={<App />} />
+         
 
         </Routes>
       {!query &&   <SlideShow/>}
