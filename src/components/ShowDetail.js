@@ -14,7 +14,7 @@ const ShowDetail = () => {
 
     const fetchShowDetail = async () => {
       try {
-        const response = await axios.get(`http://api.tvmaze.com/shows/${id}`);
+        const response = await axios.get(`https://api.tvmaze.com/shows/${id}`);
         setShow(response.data);
       } catch (error) {
         console.error("Error fetching show details:", error);

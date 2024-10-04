@@ -9,7 +9,7 @@ const TrendingShows = () => {
   useEffect(() => {
     const fetchShows = async () => {
       try {
-        const response = await axios.get('http://api.tvmaze.com/shows');
+        const response = await axios.get('https://api.tvmaze.com/shows');
         const sortedShows = response.data.sort((a, b) => b.rating.average - a.rating.average).slice(0, 10);
         setShows(sortedShows);
       } catch (error) {
