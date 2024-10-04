@@ -7,8 +7,7 @@ import ShowCard from './components/ShowCard';
 import ShowDetail from './components/ShowDetail';
 import SlideShow from './components/Slideshow';
 import TrendingShows from './components/TrendingShows';
-
-
+import AppBarComponent from './components/AppBarComponent';
 
 const App = () => {
   const [shows, setShows] = useState([]);
@@ -31,29 +30,37 @@ const App = () => {
   };
 
   return (
-    
     <Router>
-      <Container>
+       <AppBarComponent />
+      <Container sx={{mt:10}}>
         <SearchBar onSearch={handleSearch} />
-        <Grid container spacing={4}>
+        <Grid 
+          container 
+          spacing={2} 
+          justifyContent="center"
+          sx={{
+            // Define a grid layout for 3 cards per row on XS and 4 on MD
+            // gridTemplateColumns: { xs: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' },
+            // gap: 2,
+          }}
+        >
           {shows.map((item) => (
-            <Grid item key={item.show.id} xs={12} sm={6} md={4}>
-              <a href={`/show/${item.show.id}`}  rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <Grid item key={item.show.id} xs={4} sm={6} md={3}>
+              <a href={`/show/${item.show.id}`} rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <ShowCard show={item.show} />
               </a>
             </Grid>
           ))}
         </Grid>
 
-
         <Routes>
           <Route path="/show/:id" element={<ShowDetail />} />
-         
-
         </Routes>
-      {!query &&   <SlideShow/>}
-      {!query && <TrendingShows />}
 
+        {!query && <SlideShow />}
+
+        {!query && 
+        <TrendingShows />}
       </Container>
     </Router>
   );
