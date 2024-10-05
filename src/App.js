@@ -54,6 +54,7 @@ const App = () => {
         </Grid>
 
         <Routes>
+       
           <Route path="/show/:id" element={<ShowDetail />} />
         </Routes>
 

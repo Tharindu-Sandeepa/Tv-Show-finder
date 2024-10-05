@@ -21,7 +21,7 @@ const fadeImages = [
 const Slideshow = () => {
   return (
     <Box sx={{ mt: 7, width: '100%', maxHeight: '400px', overflow: 'hidden', borderRadius: '16px' }}>
-      <Fade duration={1200} arrows={false}>
+      <Fade duration={2000} arrows={false}>
         {fadeImages.map((fadeImage, index) => (
           <Box key={index}>
             <img

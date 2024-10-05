@@ -19,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
         sx={{
           backgroundColor: '#717171',
           color: 'white',
-          borderRadius: '35px',
+          borderRadius: '15px',
           width: '900px',
           '& .MuiOutlinedInput-root': {
             borderRadius: '35px',
@@ -50,8 +50,8 @@ const SearchBar = ({ onSearch }) => {
         variant="contained"
         sx={{
           ml: 2,
-          borderRadius: '35px',
-          backgroundColor: '#4285F4', 
+          borderRadius: '15px',
+          backgroundColor: '#00CED1', 
           color: 'white',
           textTransform: 'none',
           '&:hover': {

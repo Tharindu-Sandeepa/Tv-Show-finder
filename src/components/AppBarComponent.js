@@ -3,13 +3,13 @@ import { AppBar, Toolbar, Typography, Container, Slide, Box, IconButton, Menu, M
 import { useScrollTrigger } from '@mui/material';
 import styled from '@emotion/styled';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+
 
 // Create a styled Typography component for the logo
 const LogoTypography = styled(Typography)`
-  font-family: 'Courier New', monospace; /* Replace with your desired font */
-  font-weight: bold;
-  font-size: 24px;
-  background: linear-gradient(90deg, #ff6b6b, #f7c0b3, #f9e86d, #6bff7a, #6bb9ff);
+font-family: 'Dancing Script', cursive;  font-size: 24px;
+  background: linear-gradient(90deg, #00FFFF, #00FFFF, #00FFFF, #00CED1, #7FFFD4);
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
@@ -62,9 +62,15 @@ const AppBarComponent = () => {
       >
         <Container>
           <Toolbar>
-            <LogoTypography variant="h6" sx={{ flexGrow: 1 }}>
-              Show Finder
-            </LogoTypography>
+          <LogoTypography
+  variant="h6"
+  sx={{ flexGrow: 1 }}
+  component={Link}  // Use Link component
+  to="/"            // Navigate to the homepage
+  style={{ textDecoration: 'none' }} // Remove underline
+>
+  Show Finder
+</LogoTypography>
 
             {/* Mobile Menu Icon */}
             <IconButton

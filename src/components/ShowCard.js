@@ -13,6 +13,8 @@ const ShowCard = ({ show }) => {
         position: 'relative' // Needed for positioning the rating on the image
       }} 
       sx={{
+        width: { xs: '120px', md: '270px' },  // Responsive width
+        height: { xs: '180px', md: '400px' },
         '&:hover': {
           transform: 'scale(1.05)',
           boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
@@ -52,8 +54,8 @@ const ShowCard = ({ show }) => {
               position: 'absolute',
               top: 8,
               right: 8,
-              backgroundColor: 'rgba(0, 0, 0, 0.2)',
-              padding: '1px 8px',
+              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              padding: '0.5px 8px',
               borderRadius: '8px',
               display: 'flex',
               alignItems: 'center',

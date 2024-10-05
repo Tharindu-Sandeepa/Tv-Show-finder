@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Container, Grid, Card, CardContent, Typography, CardMedia,CardActionArea, Box } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-
+import { FaFireAlt } from 'react-icons/fa';
+import { keyframes } from '@emotion/react';
 const TrendingShows = () => {
   const [shows, setShows] = useState([]);
 
@@ -21,14 +22,48 @@ const TrendingShows = () => {
     fetchShows();
   }, []);
 
+  const flameAnimation = keyframes`
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+`;
+
   return (
     <Container>
-      <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>Trending TV Shows 🔥</Typography>
+         <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      {/* Trending TV Shows Title */}
+      <Typography
+        variant="h6"
+        gutterBottom
+        
+        sx={{
+          mt: { xs: 1, md: 2 },   // Responsive marginTop for XS and MD
+          fontSize: { xs: '1.0rem', md: '1.5rem' },  // Responsive fontSize
+        fontFamily: 'Dancing Script',
+          color: 'yellow',           // Text color
+        }}
+      >
+        Trending TV Shows 
+      </Typography>
+
+      {/* Animated Fire Icon */}
+      <Box
+        sx={{
+          ml: 1,  // Margin left for spacing
+          mt:1,
+          display: 'flex',
+          alignItems: 'center',
+          animation: `${flameAnimation} 1s infinite ease-in-out`, // Apply animation
+        }}
+      >
+        <FaFireAlt color="#FF4500" size={21} />
+      </Box>
+    </Box>
       <Grid container spacing={2}>
         {shows.map((show) => (
           <Grid item key={show.id} xs={4} sm={6} md={4}>
             <Link to={`/show/${show.id}`} style={{ textDecoration: 'none' }}>
-              <Card 
+            <Card 
       style={{ 
         backgroundColor: '#1c1c1c', 
         color: 'white', 
@@ -37,6 +72,9 @@ const TrendingShows = () => {
         position: 'relative' // Needed for positioning the rating on the image
       }} 
       sx={{
+        mt:2,
+        width: { xs: '120px', md: '320px' },  // Responsive width
+        height: { xs: '180px', md: '400px' },
         '&:hover': {
           transform: 'scale(1.05)',
           boxShadow: '0 8px 16px rgba(0,0,0,0.3)',
@@ -76,8 +114,8 @@ const TrendingShows = () => {
               position: 'absolute',
               top: 8,
               right: 8,
-              backgroundColor: 'rgba(0, 0, 0, 0.2)',
-              padding: '1px 8px',
+              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              padding: '0.5px 8px',
               borderRadius: '8px',
               display: 'flex',
               alignItems: 'center',
