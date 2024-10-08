@@ -3,6 +3,9 @@ import { Grid, Container, Link, Typography, Chip, Button, Box } from '@mui/mater
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import StarIcon from '@mui/icons-material/Star';
+import CircularProgress from '@mui/material/CircularProgress';
+import sfLogo from './sf3.png'; // Import your logo image
+
 
 const ShowDetail = () => {
   const { id } = useParams();
@@ -24,9 +27,48 @@ const ShowDetail = () => {
 
   if (!show) {
     return (
-      <Container sx={{ padding: { xs: '10px', sm: '20px' }, backgroundColor: '#141414', color: 'white', mt: 9 }}>
-        <Typography variant="h6">Loading...</Typography>
-      </Container>
+      <Container
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        backgroundColor: '#141414',
+        color: 'white',
+        mt: 9,
+        padding: { xs: '10px', sm: '20px' },
+      }}
+    >
+      <Box
+        sx={{
+          textAlign: 'center',
+        }}
+      >
+        {/* Logo */}
+        <Box
+          component="img"
+          src={sfLogo} // replace with your logo path
+          alt="Logo"
+          sx={{
+            width: { xs: '100px', md: '150px' }, // Responsive width
+            mb: 7, // Margin bottom
+          }}
+        />
+        {/* Loading animation */}
+        <CircularProgress
+          sx={{
+            color: 'white',
+            size: { xs: 40, md: 60 }, // Responsive size
+          }}
+        />
+        <Typography
+          variant="h6"
+          sx={{ mt: 2 }}
+        >
+          Loading...
+        </Typography>
+      </Box>
+    </Container>
     );
   }
 
