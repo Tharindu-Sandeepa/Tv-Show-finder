@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import StarIcon from '@mui/icons-material/Star';
 import CircularProgress from '@mui/material/CircularProgress';
-import sfLogo from './sf3.png'; // Import your logo image
+import sfLogo from './sf3.png'; 
 
 
 const ShowDetail = () => {
@@ -44,21 +44,20 @@ const ShowDetail = () => {
           textAlign: 'center',
         }}
       >
-        {/* Logo */}
+      
         <Box
           component="img"
-          src={sfLogo} // replace with your logo path
+          src={sfLogo} 
           alt="Logo"
           sx={{
-            width: { xs: '100px', md: '150px' }, // Responsive width
-            mb: 7, // Margin bottom
+            width: { xs: '100px', md: '150px' }, 
+            mb: 7, 
           }}
         />
-        {/* Loading animation */}
         <CircularProgress
           sx={{
             color: 'white',
-            size: { xs: 40, md: 60 }, // Responsive size
+            size: { xs: 40, md: 60 }, 
           }}
         />
         <Typography
@@ -177,7 +176,7 @@ const ShowDetail = () => {
           {/* External Links Buttons */}
           <Box sx={{ mt: 3, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
             {/* 1337x Link */}
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               startIcon={<img src="/images/1337x.png" alt="1337x" style={{ width: '20px', height: '20px' }} />}
@@ -196,7 +195,7 @@ const ShowDetail = () => {
               }}
             >
               Search on 1337x
-            </Button>
+            </Button> */}
 
             {/* PSA Link */}
             <Button

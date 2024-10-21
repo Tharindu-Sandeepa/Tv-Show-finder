@@ -8,6 +8,7 @@ import ShowDetail from './components/ShowDetail';
 import SlideShow from './components/Slideshow';
 import TrendingShows from './components/TrendingShows';
 import AppBarComponent from './components/AppBarComponent';
+import FooterComponent from './components/Footer';
 
 const App = () => {
   const [shows, setShows] = useState([]);
@@ -63,6 +64,7 @@ const App = () => {
         {!query && 
         <TrendingShows />}
       </Container>
+   <FooterComponent/>
     </Router>
   );
 };
