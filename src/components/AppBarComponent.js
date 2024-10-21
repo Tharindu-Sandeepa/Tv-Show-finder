@@ -12,9 +12,9 @@ import {
 import { useScrollTrigger } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import sfLogo from './sf3.png'; // Import your logo image
+import sfLogo from './sf3.png'; 
 
-// Component for individual link items
+
 const LinkItem = ({ href, iconSrc, name }) => (
   <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
     <a
@@ -31,7 +31,7 @@ const LinkItem = ({ href, iconSrc, name }) => (
       <img
         src={iconSrc}
         alt={name}
-        style={{ height: '30px', width: 'auto', marginRight: '5px' }} // Uniform height with auto width
+        style={{ height: '30px', width: 'auto', marginRight: '5px' }} 
       />
       {name}
     </a>
@@ -40,7 +40,7 @@ const LinkItem = ({ href, iconSrc, name }) => (
 
 const AppBarComponent = () => {
   const trigger = useScrollTrigger();
-  const [anchorEl, setAnchorEl] = useState(null); // State to manage the menu open/close
+  const [anchorEl, setAnchorEl] = useState(null); 
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -55,22 +55,22 @@ const AppBarComponent = () => {
       <AppBar
         position="fixed"
         sx={{
-          backgroundColor: '#1c1c1c', // Dark background
+          backgroundColor: '#1c1c1c', 
           backgroundImage:
-            'linear-gradient(to right, rgba(28, 28, 28, 0.9), rgba(255, 106, 106, 0.1), rgba(247, 192, 179, 0.1))', // Colorful background gradient
-          backdropFilter: 'blur(10px)', // Blur effect
+            'linear-gradient(to right, rgba(28, 28, 28, 0.9), rgba(255, 106, 106, 0.1), rgba(247, 192, 179, 0.1))', 
+          backdropFilter: 'blur(10px)', 
           boxShadow: 'none',
         }}
       >
         <Container>
           <Toolbar>
-            {/* Logo Image with responsive sizing using Box */}
+           
             <Box
               component={Link}
               to="/"
               sx={{
                 display: 'flex',
-                justifyContent: 'flex-start', // Align logo to the left
+                justifyContent: 'flex-start', 
                 alignItems: 'center',
                 flexGrow: 1,
               }}
@@ -80,23 +80,23 @@ const AppBarComponent = () => {
                 src={sfLogo}
                 alt="Show Finder Logo"
                 sx={{padding:-10,
-                  height: { xs: '50px', sm: '60px', md: '70px' }, // Responsive heights
+                  height: { xs: '50px', sm: '60px', md: '70px' }, 
                 }}
               />
             </Box>
 
-            {/* Mobile Menu Icon */}
+          
             <IconButton
               size="large"
               edge="end"
               color="inherit"
               onClick={handleMenuClick}
-              sx={{ display: { xs: 'block', md: 'none' } }} // Show only on XS screens
+              sx={{ display: { xs: 'block', md: 'none' } }} 
             >
               <MenuIcon />
             </IconButton>
 
-            {/* Links for larger screens */}
+          
             <Box
               sx={{
                 display: { xs: 'none', md: 'flex' },
@@ -110,7 +110,7 @@ const AppBarComponent = () => {
               <LinkItem href="https://www.1337xx.to/" iconSrc="/images/1337x.png" name="" />
             </Box>
 
-            {/* Menu for mobile */}
+           
             <Menu
             sx={{mt:1}}
               anchorEl={anchorEl}
@@ -118,8 +118,8 @@ const AppBarComponent = () => {
               onClose={handleMenuClose}
               PaperProps={{
                 sx: {
-                  backgroundColor: '#1c1c1c', // Dark background for menu
-                  color: 'white', // White text color
+                  backgroundColor: '#1c1c1c', 
+                  color: 'white', 
                 },
               }}
             >

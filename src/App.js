@@ -39,11 +39,7 @@ const App = () => {
           container 
           spacing={2} 
           justifyContent="center"
-          sx={{
-            // Define a grid layout for 3 cards per row on XS and 4 on MD
-            // gridTemplateColumns: { xs: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' },
-            // gap: 2,
-          }}
+         
         >
           {shows.map((item) => (
             <Grid item key={item.show.id} xs={4} sm={6} md={3}>

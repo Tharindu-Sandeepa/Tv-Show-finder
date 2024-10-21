@@ -29,7 +29,7 @@ const Slideshow = () => {
               alt={`Slide ${index + 1}`}
               style={{
                 width: '100%',
-                height: '100%', // Allow height to be dynamic
+                height: '100%', 
                 objectFit: 'cover',
                 borderRadius: '16px',
               }}

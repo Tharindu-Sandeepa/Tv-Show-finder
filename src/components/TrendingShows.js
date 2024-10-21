@@ -31,29 +31,28 @@ const TrendingShows = () => {
   return (
     <Container>
          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      {/* Trending TV Shows Title */}
+     
       <Typography
         variant="h6"
         gutterBottom
         
         sx={{
-          mt: { xs: 1, md: 2 },   // Responsive marginTop for XS and MD
-          fontSize: { xs: '1.0rem', md: '1.5rem' },  // Responsive fontSize
+          mt: { xs: 1, md: 2 },   
+          fontSize: { xs: '1.0rem', md: '1.5rem' }, 
         fontFamily: 'Dancing Script',
-          color: 'yellow',           // Text color
+          color: 'yellow',          
         }}
       >
         Trending TV Shows 
       </Typography>
 
-      {/* Animated Fire Icon */}
       <Box
         sx={{
-          ml: 1,  // Margin left for spacing
+          ml: 1,  
           mt:1,
           display: 'flex',
           alignItems: 'center',
-          animation: `${flameAnimation} 1s infinite ease-in-out`, // Apply animation
+          animation: `${flameAnimation} 1s infinite ease-in-out`, 
         }}
       >
         <FaFireAlt color="#FF4500" size={21} />
@@ -69,11 +68,11 @@ const TrendingShows = () => {
         color: 'white', 
         borderRadius: '10px', 
         overflow: 'hidden', 
-        position: 'relative' // Needed for positioning the rating on the image
+        position: 'relative' 
       }} 
       sx={{
         mt:2,
-        width: { xs: '120px', md: '320px' },  // Responsive width
+        width: { xs: '120px', md: '320px' },  
         height: { xs: '180px', md: '400px' },
         '&:hover': {
           transform: 'scale(1.05)',
@@ -83,16 +82,16 @@ const TrendingShows = () => {
       }}
     >
       <CardActionArea>
-        {/* Card Media for image */}
+      
         <Box sx={{ position: 'relative', overflow: 'hidden' }}>
           <CardMedia
             component="img"
             sx={{
-              height: { xs: 110, sm: 200, md: 300 }, // Maintain consistent height
+              height: { xs: 110, sm: 200, md: 300 }, 
             }}
             image={show.image ? show.image.medium : 'https://via.placeholder.com/210x295'}
             alt={show.name}
-            style={{ filter: 'brightness(0.85)', transition: 'filter 0.3s' }} // Slightly darken the image for contrast
+            style={{ filter: 'brightness(0.85)', transition: 'filter 0.3s' }} 
           />
           
           {/* Fade effect over the image */}
@@ -108,7 +107,7 @@ const TrendingShows = () => {
             }}
           /> */}
           
-          {/* Rating positioned on the top-right of the image */}
+         
           <Box
             sx={{
               position: 'absolute',
@@ -132,7 +131,7 @@ const TrendingShows = () => {
           </Box>
         </Box>
 
-        {/* Card Content for name and premiere date with fade effect on the background */}
+       
         <CardContent 
           sx={{ 
             background: 'linear-gradient(to top, #1c1c1c, transparent)',
@@ -140,7 +139,7 @@ const TrendingShows = () => {
             position: 'relative'
           }}
         >
-          {/* Show Name */}
+         
           <Typography 
             gutterBottom 
             variant="h6" 
@@ -150,7 +149,7 @@ const TrendingShows = () => {
             {show.name}
           </Typography>
 
-          {/* Centered Premiere Date */}
+         
           <Typography 
             variant="subtitle2" 
             color="textSecondary" 

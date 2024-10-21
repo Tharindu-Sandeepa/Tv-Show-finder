@@ -10,10 +10,10 @@ const ShowCard = ({ show }) => {
         color: 'white', 
         borderRadius: '10px', 
         overflow: 'hidden', 
-        position: 'relative' // Needed for positioning the rating on the image
+        position: 'relative' 
       }} 
       sx={{
-        width: { xs: '120px', md: '270px' },  // Responsive width
+        width: { xs: '120px', md: '270px' },  
         height: { xs: '180px', md: '400px' },
         '&:hover': {
           transform: 'scale(1.05)',
@@ -23,16 +23,16 @@ const ShowCard = ({ show }) => {
       }}
     >
       <CardActionArea>
-        {/* Card Media for image */}
+      
         <Box sx={{ position: 'relative', overflow: 'hidden' }}>
           <CardMedia
             component="img"
             sx={{
-              height: { xs: 110, sm: 200, md: 300 }, // Maintain consistent height
+              height: { xs: 110, sm: 200, md: 300 }, 
             }}
             image={show.image ? show.image.medium : 'https://via.placeholder.com/210x295'}
             alt={show.name}
-            style={{ filter: 'brightness(0.85)', transition: 'filter 0.3s' }} // Slightly darken the image for contrast
+            style={{ filter: 'brightness(0.85)', transition: 'filter 0.3s' }} 
           />
           
           {/* Fade effect over the image */}
@@ -48,7 +48,7 @@ const ShowCard = ({ show }) => {
             }}
           /> */}
           
-          {/* Rating positioned on the top-right of the image */}
+       
           <Box
             sx={{
               position: 'absolute',
@@ -72,7 +72,7 @@ const ShowCard = ({ show }) => {
           </Box>
         </Box>
 
-        {/* Card Content for name and premiere date with fade effect on the background */}
+        
         <CardContent 
           sx={{ 
             background: 'linear-gradient(to top, #1c1c1c, transparent)',
@@ -80,7 +80,7 @@ const ShowCard = ({ show }) => {
             position: 'relative'
           }}
         >
-          {/* Show Name */}
+          
           <Typography 
             gutterBottom 
             variant="h6" 
@@ -90,7 +90,7 @@ const ShowCard = ({ show }) => {
             {show.name}
           </Typography>
 
-          {/* Centered Premiere Date */}
+         
           <Typography 
             variant="subtitle2" 
             color="textSecondary" 

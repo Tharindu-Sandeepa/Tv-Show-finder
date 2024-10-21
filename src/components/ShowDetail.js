@@ -103,7 +103,7 @@ const ShowDetail = () => {
   return (
     <Container sx={{ padding: { xs: '10px', sm: '20px' }, backgroundColor: '#141414', color: 'white', mt: 9 }}>
       <Grid container spacing={3}>
-        {/* Show Image */}
+      
         <Grid item xs={12} md={4}>
           {image.original && (
             <img
@@ -119,7 +119,7 @@ const ShowDetail = () => {
           )}
         </Grid>
 
-        {/* Show Details */}
+       
         <Grid item xs={12} md={8}>
           <Typography variant="h4" sx={{ fontSize: { xs: '1.5rem', sm: '2rem' } }}>{name}</Typography>
           {type && <Typography variant="body1" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}><strong>Type:</strong> {type}</Typography>}
@@ -173,7 +173,7 @@ const ShowDetail = () => {
             </Typography>
           )}
 
-          {/* External Links Buttons */}
+         
           <Box sx={{ mt: 3, display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2 }}>
             {/* 1337x Link */}
             {/* <Button
@@ -197,7 +197,7 @@ const ShowDetail = () => {
               Search on 1337x
             </Button> */}
 
-            {/* PSA Link */}
+          
             <Button
               variant="contained"
               color="primary"
@@ -211,8 +211,8 @@ const ShowDetail = () => {
                 '&:hover': {
                   backgroundColor: '#333333',
                 },
-                width: { xs: '100%', sm: 'auto' }, // Full width on XS, auto on SM and above
-                textTransform: 'none', // Keep text as is
+                width: { xs: '100%', sm: 'auto' }, 
+                textTransform: 'none', 
                 padding: '8px 16px',
               }}
             >
