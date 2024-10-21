@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Container,
   Box,
-  IconButton,
   Typography,
   Link as MuiLink,
 } from '@mui/material';
